@@ -28,6 +28,7 @@ Para compilar o código, utilize o GCC (ou outro compilador C) com o flag `-lpth
 
 ```bash
 gcc controle_trafego.c -o controle_trafego -lpthread
+```
 
 Isso criará um executável chamado controle_trafego.
 Execução
