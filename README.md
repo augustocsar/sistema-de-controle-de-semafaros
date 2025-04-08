@@ -28,3 +28,24 @@ Para compilar o código, utilize o GCC (ou outro compilador C) com o flag `-lpth
 
 ```bash
 gcc controle_trafego.c -o controle_trafego -lpthread
+
+Isso criará um executável chamado controle_trafego.
+Execução
+Para executar o programa compilado:
+
+./controle_trafego
+
+O programa solicitará que você digite:
+O limite para a soma dos pares para o Cruzamento 1.
+O número para calcular o fatorial para o Cruzamento 1.
+O limite para a soma dos pares para o Cruzamento 2.
+O número para calcular o fatorial para o Cruzamento 2.
+Após receber as entradas, o processo pai criará os processos filhos, que por sua vez criarão as threads. A saída mostrará mensagens indicando o início e o fim dos processos e threads, bem como os resultados dos cálculos.
+Estrutura do Código
+main(): Função principal executada pelo processo pai. Responsável por obter a entrada do usuário, criar os dois processos filhos (fork()) e esperar que eles terminem (waitpid()).
+controlar_cruzamento(): Função executada por cada processo filho. Responsável por criar as duas threads de trabalho (pthread_create()) e esperar que elas terminem (pthread_join()).
+soma_pares(): Função executada pela primeira thread de cada processo filho. Calcula a soma dos números pares até o limite especificado.
+calcula_fatorial(): Função executada pela segunda thread de cada processo filho. Calcula o fatorial do número especificado.
+
+Autor
+Augusto César
