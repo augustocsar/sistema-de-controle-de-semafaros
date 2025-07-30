@@ -2,7 +2,7 @@
 
 Este projeto implementa um sistema simples em C que simula o monitoramento de dois cruzamentos de tráfego. Ele utiliza processos (via `fork()`) e threads POSIX (`pthread`) para demonstrar conceitos de concorrência em um ambiente Linux (ou WSL - Windows Subsystem for Linux).
 
-Desenvolvido como parte de um trabalho acadêmico para a disciplina de **[Nome da Disciplina - Substitua aqui]**.
+Desenvolvido como parte de um trabalho acadêmico para a disciplina de **Sistemas Operacionais**.
 
 ## Funcionalidades
 
